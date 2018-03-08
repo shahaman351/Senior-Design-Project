@@ -1,0 +1,83 @@
+<html>
+<head>
+<link rel="icon" href="logo.png">
+<style>
+body
+{
+    background: blue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 30%; /* Could be more or less, depending on screen size */
+}
+.content {
+    max-width: 500px;
+    margin: auto;
+    background: white;
+    padding: 10px;
+}
+.login{
+    border-radius: 8px;
+}
+.loginbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: "red";
+    cursor: pointer;
+    width: 20%;
+}
+.loginbtn:hover {
+    opacity: 0.8;
+}
+
+</style>
+</head>
+
+<body align = "center">
+  <title> Gloucester County NJ </title>
+
+
+
+<form name = "login" method="post" class ="modal-content">
+  <h1> Gloucester County NJ </h1>
+  <h2> Admin Login </h2>
+
+  <img src="adminimage.png" width = "150" height = "150">
+  <br><br>
+  <div class = "login">
+<label><big><b>Username: </b></big></label>
+      <input type="text" placeholder="Enter Username" name="userid" style="font-size: 16pt; height: 35px; width:280px;"  required>
+<br><br>
+<label><big><b>Password: </big></b></label>
+      <input type="password" placeholder="Enter Password" name="pswrd" style="font-size: 16pt; height: 35px; width:280px;" required>
+<br><br>
+<input type="button" class="loginbtn" onclick = "check(this.form)" value = "Login"/>
+</div>
+
+</form>
+
+
+
+<script language = "javascript">
+function check(form)
+{
+  //make a post request to server, that checks for the admin username and Password
+  //and returns back if its valid or not
+  if (form.userid.value == "admin" && form.pswrd.value == "seniorproject")
+  {
+    window.open('index.html', '_self')
+  }
+  else
+  {
+    alert("Incorret username and password")
+  }
+}
+</script>
+</body>
+
+</html>

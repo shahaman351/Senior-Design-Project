@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Notifications</title>
+  <link rel="icon" href="logo.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <style>
+    .modal {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      /* Stay in place */
+      z-index: 1;
+      /* Sit on top */
+      padding-top: 100px;
+      /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%;
+      /* Full width */
+      height: 100%;
+      /* Full height */
+      overflow: auto;
+      /* Enable scroll if needed */
+      background-color: rgb(0, 0, 0);
+      /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.4);
+      /* Black w/ opacity */
+    }
+
+
+    .modal-content {
+      background-color: #fefefe;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+    }
+
+
+    .close {
+      color: #aaaaaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-inverse role=navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.html">Administrator</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Main Menu</a></li>
+        <li><a href="news.html">News</a></li>
+        <li class="active"><a href="#">Alerts</a></li>
+        <li><a href="map.html">Map</a></li>
+        <li><a href="stats.html">Residents Status</a></li>
+      </ul>
+      <a class="navbar-brand pull-right" href="signin.html">Log Out</a>
+    </div>
+  </nav>
+
+
+
+  <div class="container">
+    <h3>Alerts</h3>
+    <p>Alerts </p>
+  </div>
+
+
+
+  <table class="table" id="myTable">
+    <thead>
+      <tr class="something">
+        <th class="col-md-2">Alerts</th>
+        <th class="col-md-3">Status</th>
+        <th class="col-md-6">Date & Time</th>
+        <th class="col-md-6"></th>
+        <th class="col-md-6"></th>
+        <th class="col-md-6"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="warning">
+        <td height="80" id="news1">News 1 Title</td>
+        <td height="80">Published</td>
+        <td height="80">March 04 7:00 PM</td>
+        <td height="80" id="myBtn" ><u>Edit</u></td>
+        <td height="80" onclick="myFunction()"><u>Delete</u></td>
+        <td height="80" onclick="alertbox()"><button> Push </button></td>
+      </tr>
+      <tr class="success">
+        <td height="80" id="news2">News 2 Title</td>
+        <td height="80">Published</td>
+        <td height="80">March 04 5:30 PM</td>
+        <td height="80" id="myBtn1"><u>Edit</u></td>
+        <td height="80" onclick="myFunction()"><u>Delete</u></td>
+        <td height="80" onclick="alertbox()"><button> Push </button></td>
+      </tr>
+      <tr class="danger">
+        <td height="80" id="news3">News 3 Title</td>
+        <td height="80">Published</td>
+        <td height="80">March 04 12:30 PM</td>
+        <td height="80" id="myBtn2"><u>Edit</u></td>
+        <td height="80" onclick="myFunction()"><u>Delete</u></td>
+        <td height="80" onclick="alertbox()"><button> Push </button></td>
+      </tr>
+      <tr class="info">
+        <td height="80" id="news4">News 4 Title</td>
+        <td height="80">Published</td>
+        <td height="80">March 02 1:30 AM</td>
+        <td height="80" id="myBtn3"><u>Edit</u></td>
+        <td height="80" onclick="myFunction()"><u>Delete</u></td>
+        <td height="80" onclick="alertbox()"><button> Push </button></td>
+      </tr>
+      <tr class="warning">
+        <td height="80" id="news5">News 5 Title</td>
+        <td height="80">Published</td>
+        <td height="80">March 02 11:30 PM</td>
+        <td height="80" id="myBtn4"><u>Edit</u></td>
+        <td height="80" onclick="myFunction()"><u>Delete</u></td>
+        <td height="80" onclick="alertbox()"><button> Push </button></td>
+      </tr>
+      <tr class="active">
+        <td height="80" id="news6">News 6 Title</td>
+        <td height="80">Published</td>
+        <td height="80">March 02 6:30 PM</td>
+        <td height="80" id="myBtn5"><u>Edit</u></td>
+        <td height="80" onclick="myFunction()"><u>Delete</u></td>
+        <td height="80" onclick="alertbox()"><button> Push </button></td>
+      </tr>
+    </tbody>
+  </table>
+  <div id="myModal" class="modal">
+
+
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <form id="form1" align="center">
+        <label id="_header">Edit the text</label>
+        <textarea rows="10" cols="70"></textarea>
+        <text id="news6"></text> Alert Title<br>
+        <input type="text" name="lastname" value="Mouse">
+        <br><br>
+        <input type= "submit" value="Cancel">
+
+        <input type= "submit" value="Save">
+
+      </form>
+    </div>
+
+  </div>
+
+
+
+
+
+  <script>
+    function myFunction() {
+      document.getElementById("myTable").deleteRow(1);
+    }
+
+    function alertbox() {
+      alert("Pushed the Alert");
+    }
+
+    function formpop() {
+      document.getElementById("form1");
+    }
+
+    function editClicked(val){
+        var _id = "news"+val;
+        var _text = document.getElementById(_id);
+
+        document.getElementById('_header').innerHTML = _text.innerHTML;
+
+    }
+
+    var modal = document.getElementById('myModal');
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+    var btn1 = document.getElementById("myBtn1");
+    var btn2 = document.getElementById("myBtn2");
+    var btn3 = document.getElementById("myBtn3");
+    var btn4 = document.getElementById("myBtn4");
+    var btn5 = document.getElementById("myBtn5");
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+      modal.style.display = "block";
+      var _text = document.getElementById('news1');
+      document.getElementById("_header").innerHTML = _text.innerHTML;
+    }
+    btn1.onclick = function() {
+      modal.style.display = "block";
+    }
+    btn2.onclick = function() {
+      modal.style.display = "block";
+    }
+    btn3.onclick = function() {
+      modal.style.display = "block";
+    }
+    btn4.onclick = function() {
+      modal.style.display = "block";
+    }
+    btn5.onclick = function() {
+      modal.style.display = "block";
+    }
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Emergency</title>
+  <link rel="icon" href="logo.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+
+
+<style>
+#map {
+  height: 400px;
+  width : 50%;
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse role=navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.html">Administrator</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="index.html">Main Menu</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="alerts.html">Alerts</a></li>
+      <li class="active"><a href="map.html">Map</a></li>
+      <li><a href="stats.html">Residents Status</a></li>
+    </ul>
+    <a class="navbar-brand pull-right" href="signin.html">Log Out</a>
+  </div>
+</nav>
+
+<div class="container">
+  <h3>Maps</h3>
+  <p>Google Maps API </p>
+</div>
+
+
+
+<div id = "map"> </div>
+
+<script>
+function initMap()
+{
+  var uluru = {lat: 39.9552617, lng:  -75.189807};
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 9,
+    center: uluru
+  });
+
+  var marker = new google.maps.Marker({
+    position: uluru,
+    map: map
+  });
+}
+</script>
+
+<script async defer
+src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDEE6TIfmppZTMCiMNg1mhuwBn3KoF5Eys&callback=initMap">
+
+</script>
+
+
+
+
+
+</body>
+</html>
