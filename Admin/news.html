@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>News</title>
+  <link rel="icon" href="logo.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<script src = "socket.io/socket.io.js"></script>
+<script src = "http://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+<nav class="navbar navbar-inverse role=navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.html">Administrator</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="index.html">Main Menu</a></li>
+      <li class="active"><a href="#">News</a></li>
+      <li><a href="alerts.html">Alerts</a></li>
+      <li><a href="map.html">Map</a></li>
+      <li><a href="stats.html">Residents Status</a></li>
+    </ul>
+    <a class="navbar-brand pull-right" href="signin.html">Log Out</a>
+  </div>
+</nav>
+
+<div class="container">
+  <h3>News</h3>
+  <p>Current News</p>
+</div>
+
+
+
+
+
+<table class="table" width="200">
+  <thead>
+    <tr class = "something">
+      <th class="col-md-2">News</th>
+      <th class="col-md-3">Status</th>
+      <th class="col-md-6">Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td height = "80">News 1 Title</td>
+      <td height = "80">Published</td>
+      <td height = "80">03/04/2018</td>
+    </tr>
+    <tr class="success">
+      <td height = "80">News 2 Title</td>
+      <td height = "80">Published</td>
+      <td height = "80">03/04/2018</td>
+    </tr>
+    <tr class="danger">
+      <td height = "80">News 3 Title</td>
+      <td height = "80">Published</td>
+      <td height = "80">03/04/2018</td>
+    </tr>
+    <tr class="info">
+      <td height = "80">News 4 Title</td>
+      <td height = "80">Published</td>
+      <td height = "80">03/04/2018</td>
+    </tr>
+    <tr class="warning">
+      <td height = "80">News 5 Title</td>
+      <td height = "80">Published</td>
+      <td height = "80">03/03/2018</td>
+    </tr>
+    <tr class="active">
+      <td height = "80">News 6 Title</td>
+      <td height = "80">Published</td>
+      <td height = "80">03/03/2018</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<script>
+
+var socket = io.connect('http://localhost');
+
+socket.on('notification', function(data)
+{
+$('#container').html(data.sample);
+});
+
+</script>
+
+
+
+
+</body>
+</html>

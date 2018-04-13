@@ -1,0 +1,95 @@
+<html>
+<head>
+
+    <link rel="icon" href="logo.png">
+    <title>Welcome to Gloucester County NJ</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+    .navbar-custom1 .navbar-text {
+        color: rgba(255,255,255,.8);
+    }
+
+    tr.something {
+      td {
+        width: 90px;
+      }
+    }
+    td.something {
+    width: 90px;
+  }
+
+    
+    </style>
+  </head>
+<body>
+  <nav class="navbar navbar-inverse role=navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.html">Administrator</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Main Menu</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="alerts.html">Alerts</a></li>
+        <li><a href="map.html">Map</a></li>
+        <li><a href="stats.html">Residents Status</a></li>
+      </ul>
+  <a class="navbar-brand pull-right" href="signin.html">Log Out</a>
+    </div>
+
+  </nav>
+  <nav class="navbar-brand pull-left" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.html">Administrator</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a href="news.html">News</a></li>
+      </ul>
+      <a class="navbar-brand pull-right" href="WriteNews.html">Write News</a>
+      <a class="navbar-brand pull-right" href="signin.html">View Published</a>
+
+
+    </div>
+
+<h1>Write a News</h1>
+<form>
+<input type="text" name="NewsTitle" placeholder="Enter News Title"><br>
+<br>
+<textarea rows="4" cols="50" name = "WriteNews" placeholder="Write News Click Publish button!!!"></textarea>
+
+<br></br>
+<button type="reset" value="Reset">Clear</button>
+<input type="submit" value="Publish" onclick = "check(this.form)">
+
+</form>
+<script language = "javascript">
+function check(form)
+{
+  //make a post request to server, that checks for the admin username and Password
+  //and returns back if its valid or not
+  if (form.NewsTitle.value == "")
+  {
+    alert("Please Enter the News Title!!!")
+  }
+  else if (form.WriteNews.value == "")
+  {
+    alert("Please Enter Description About the News!!!")
+  }
+  else
+  {
+    alert ("You have successfully created news!!!")
+  }
+}
+
+
+
+</script>
+</body>
+</head>
+
+</html>

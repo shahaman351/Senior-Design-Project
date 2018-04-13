@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="logo.png">
+  <title>Welcome to Gloucester County NJ</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  .navbar-custom1 .navbar-text {
+      color: rgba(255,255,255,.8);
+  }
+
+  
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse role=navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.html">Administrator</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="index.html">Main Menu</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="alerts.html">Alerts</a></li>
+      <li><a href="map.html">Map</a></li>
+      <li class="active"><a href="#">Residents Status</a></li>
+    </ul>
+<a class="navbar-brand pull-right" href="signin.html">Log Out</a>
+  </div>
+
+</nav>
+
+<div class="container">
+  <h3>Residents Status</h3>
+  <p>Residents Status </p>
+</div>
+
+
+
+
+
+<table class="table" width="200">
+  <thead>
+    <tr class = "something">
+      <th class="col-md-2">Person</th>
+      <th class="col-md-3">Priority</th>
+      <th class="col-md-6">Type</th>
+      <th class="col-md-6">Date & Time</th>
+
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="active">
+      <td height = "80">Person 1 Name</td>
+      <td height = "80">High</td>
+      <td height = "80">Robbery</td>
+      <td height = "80">03/04/2018 11:30 PM</td>
+      <td height="80" onclick="alertbox()"><button> Contact </button></td>
+
+    </tr>
+    <tr class="success">
+      <td height = "80">Person 2 Name</td>
+      <td height = "80">Low</td>
+      <td height = "80">Electricity Outage</td>
+      <td height = "80">03/04/2018 9:30 PM</td>
+      <td height="80" onclick="alertbox()"><button> Contact </button></td>
+    </tr>
+    <tr class="danger">
+      <td height = "80">Person 3 Name</td>
+      <td height = "80">High</td>
+      <td height = "80">Fire</td>
+      <td height = "80">03/04/2018 5:30 PM</td>
+      <td height="80" onclick="alertbox()"><button> Contact </button></td>
+    </tr>
+    <tr class="info">
+      <td height = "80">Person 4 Name</td>
+      <td height = "80">Low</td>
+      <td height = "80">Slippery Conditions</td>
+      <td height = "80">03/04/2018 7:30 AM</td>
+      <td height="80" onclick="alertbox()"><button> Contact </button></td>
+    </tr>
+    <tr class="warning">
+      <td height = "80">Person 5 Name</td>
+      <td height = "80">High</td>
+      <td height = "80">Gun Shots</td>
+      <td height = "80">03/03/2018 5:30 AM </td>
+      <td height="80" onclick="alertbox()"><button> Contact </button></td>
+    </tr>
+    <tr class="active">
+      <td height = "80">Person 6 Name</td>
+      <td height = "80">Low</td>
+      <td height = "80">Severe Winter Weather</td>
+      <td height = "80">03/03/2018 12:30 AM</td>
+      <td height="80" onclick="alertbox()"><button> Contact </button></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
